@@ -13,6 +13,8 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+// UPDATE POST
+
 router.put('/:id', withAuth, async (req, res) => {
   try {
     const [affectedRows] = await Post.update(req.body, {
@@ -30,6 +32,8 @@ router.put('/:id', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// DELETE POST
 
 router.delete('/:id', withAuth, async (req, res) => {
   try {
