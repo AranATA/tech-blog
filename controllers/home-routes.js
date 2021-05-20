@@ -49,10 +49,9 @@ router.get('/post/:id', async (req, res) => {
 // giving you the login and signup route pieces below, no changes needed.
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect('/');
+    res.redirect('/dashboard');
     return;
   }
-
   res.render('login');
 });
 

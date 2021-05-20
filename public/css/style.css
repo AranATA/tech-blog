@@ -91,6 +91,7 @@ input {
   background-color: var(--tertiary);
   transform: translate(0, 0);
   box-shadow: 2px 2px var(--dark);
+  cursor: pointer;
 }
 
 .btn-inline {
