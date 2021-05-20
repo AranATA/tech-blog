@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Post, Comment, User } = require('../models/');
+const withAuth = require('../utils/auth');
 
 // get all posts for homepage
 router.get('/', async (req, res) => {
@@ -18,7 +19,7 @@ router.get('/', async (req, res) => {
 });
 
 // get single post
-router.get('/post/:id', async (req, res) => {
+router.get('/post/:id', withAuth, async (req, res) => {
   try {
     // what should we pass here? we need to get some data passed via the request body (something.something.id?)
     // change the model below, but not the findByPk method. - DONE!
@@ -37,6 +38,7 @@ router.get('/post/:id', async (req, res) => {
       // serialize the data
       const post = postData.get({ plain: true });
       // which view should we render for a single-post? - DONE!
+      console.log(post);
       res.render('single-post', { post });
     } else {
       res.status(404).end();
