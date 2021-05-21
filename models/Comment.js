@@ -16,11 +16,11 @@ class Comment extends Model {}
       allowNull: false,
       unique: true,
     },
-    dateCreated: {
-      type: DataTypes.DATEONLY,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
+    // dateCreated: {
+    //   type: DataTypes.DATEONLY,
+    //   allowNull: false,
+    //   defaultValue: DataTypes.NOW,
+    // },
     userId: {
       type: DataTypes.INTEGER,
       references: {

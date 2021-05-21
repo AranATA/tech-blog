@@ -28,11 +28,11 @@ class User extends Model {
         // TO DO! how to check the password lenght?
       },
     },
-    dateCreated: {
-      type: DataTypes.DATEONLY,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },    
+    // dateCreated: {
+    //   type: DataTypes.DATEONLY,
+    //   allowNull: false,
+    //   defaultValue: DataTypes.NOW,
+    // },    
   },
   
   // Hooks are automatic methods that run during various phases of the Pass Model lifecycle

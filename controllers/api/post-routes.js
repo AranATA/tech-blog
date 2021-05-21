@@ -2,9 +2,10 @@ const router = require('express').Router();
 const { Post } = require('../../models/');
 const withAuth = require('../../utils/auth');
 
-router.post('/', withAuth, async (req, res) => {
+// CREATE POST
+router.post('/', async (req, res) => {
   const body = req.body;
-
+console.log(body);
   try {
     const newPost = await Post.create({ ...body, userId: req.session.userId });
     res.json(newPost);
@@ -14,9 +15,9 @@ router.post('/', withAuth, async (req, res) => {
 });
 
 // UPDATE POST
-
-router.put('/:id', withAuth, async (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
+    console.log(req.body);
     const [affectedRows] = await Post.update(req.body, {
       where: {
         id: req.params.id,
@@ -34,7 +35,6 @@ router.put('/:id', withAuth, async (req, res) => {
 });
 
 // DELETE POST
-
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const [affectedRows] = Post.destroy({
