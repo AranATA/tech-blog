@@ -8,12 +8,16 @@
   <div class="card-body card-textarea">
     <div class="col-12">{{post.postContent}}</div>
   </div>
+  {{!-- {{#if loggedIn}} --}}
   <div class="form" id="new-comment-form">
       <input class="form-input" type="hidden" id={{post.id}} name={{post.id}}/>
       <p>Comment:</p>
       <textarea class="form-input" id="comment-body" name="comment-body"></textarea>
       <button type="submit" class="btn btn-primary">Submit:</button>
   </div>
+  {{!-- {{/if}} --}}
 </div>
 
+{{#if loggedIn}}
 <script src="/js/comment.js"></script>
+{{/if}}
