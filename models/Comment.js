@@ -27,7 +27,14 @@ class Comment extends Model {}
         model: 'user',
         key: 'id',
       },
-    },  
+    }, 
+    postId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'post',
+        key: 'id',
+      },
+    }, 
   },
   {
     sequelize,

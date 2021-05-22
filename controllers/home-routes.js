@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const sequelize = require('../config/config');
 const { Post, Comment, User } = require('../models/');
 const withAuth = require('../utils/auth');
 
@@ -23,8 +24,9 @@ router.get('/post/:id', withAuth, async (req, res) => {
   try {
     // what should we pass here? we need to get some data passed via the request body (something.something.id?)
     // change the model below, but not the findByPk method. - DONE!
-    const postData = await Post.findByPk(req.params.id, {
+    const postData = await Post.findOne({
       // helping you out with the include here, no changes necessary
+      where: {id: req.params.id},
       include: [
         User,
         {
@@ -59,7 +61,7 @@ router.get('/login', (req, res) => {
 
 router.get('/signup', (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect('/');
+    res.redirect('/dashboard');
     return;
   }
 
