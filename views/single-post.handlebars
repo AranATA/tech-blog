@@ -1,23 +1,31 @@
 <div class="card">
-  
-  <div class="card-header flex-row justify-space-between">
-    <div class="col-8">{{post.postTitle}}</div>
-    <div class="col-3">{{post.user.username}} / {{post.dateCreated}}</div>
+  <div class="card-header  flex-row justify-space-between">
+    <h2>
+      <a href="/post/{{id}}">
+        <div class="col-8">{{post.postTitle}}</div>
+      </a>
+    </h2>
+    <div class="col-3">posted by: {{post.user.username}} date: {{format_date post.dateCreated}}
+    </div>
   </div>  
- 
-  <div class="card-body card-textarea">
-    <div class="col-12">{{post.postContent}}</div>
+  <p class="card-body">
+   {{post.postContent}}
+  </p>
+</div>
+
+<div class="card">
+  <div class="card-header"></div>
+  <div class="card-body" id="new-comment-form">
+    <p class="form-label">Comment:</p>
+    <textarea class="form-input" id="comment-body" name="comment-body"></textarea>
+    <button type="submit" class="btn btn-primary">Submit:</button>
   </div>
-  {{!-- {{#if loggedIn}} --}}
-  <div class="form" id="new-comment-form">
+</div>
+<script src="/js/comment.js"></script>
+
+  {{!-- <div class="form" id="new-comment-form">
       <input class="form-input" type="hidden" id={{post.id}} name={{post.id}}/>
       <p>Comment:</p>
       <textarea class="form-input" id="comment-body" name="comment-body"></textarea>
-      <button type="submit" class="btn btn-primary">Submit:</button>
-  </div>
-  {{!-- {{/if}} --}}
-</div>
-
-{{#if loggedIn}}
-<script src="/js/comment.js"></script>
-{{/if}}
+      
+  </div> --}}
