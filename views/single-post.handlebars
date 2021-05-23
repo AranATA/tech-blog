@@ -5,7 +5,7 @@
         <div class="col-8">{{post.postTitle}}</div>
       </a>
     </h2>
-    <div class="col-3">posted by: {{post.user.username}} date: {{format_date post.dateCreated}}
+    <div class="col-3">posted by {{post.user.username}} on {{format_date post.dateCreated}}
     </div>
   </div>  
   <p class="card-body">
@@ -16,16 +16,10 @@
 <div class="card">
   <div class="card-header"></div>
   <div class="card-body" id="new-comment-form">
+    <input type="hidden" name="post-id" value="{{post.id}}"/>
     <p class="form-label">Comment:</p>
     <textarea class="form-input" id="comment-body" name="comment-body"></textarea>
     <button type="submit" class="btn btn-primary">Submit:</button>
   </div>
 </div>
 <script src="/js/comment.js"></script>
-
-  {{!-- <div class="form" id="new-comment-form">
-      <input class="form-input" type="hidden" id={{post.id}} name={{post.id}}/>
-      <p>Comment:</p>
-      <textarea class="form-input" id="comment-body" name="comment-body"></textarea>
-      
-  </div> --}}
