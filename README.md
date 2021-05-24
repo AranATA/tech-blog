@@ -62,18 +62,10 @@ The codebase achieves the following criteria:<br>
 
 ***
 
-Under the link below you will find a walkthrough video that demonstrates the functionality of the app. <br>
-If the video appears out of focus please hit the space bar twice.
-
-[https://drive.google.com/file/d/1R_f3fNE6XvADJ-OV4wGsR3qmg_w4hl6t/view](https://drive.google.com/file/d/1R_f3fNE6XvADJ-OV4wGsR3qmg_w4hl6t/view)
-
-<br>
-<br>
-
 A screenshot that shows the full generated web page:<br>
 <br>
 
-![alt text](dist/images/scrshot-team-profile-generator.png)
+![alt text](public/images/scrshot-home.png)
 
 <br>
 <br>
