@@ -40,7 +40,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
       const post = postData.get({ plain: true });
       // which view should we render for a single-post? - DONE!
       console.log(post);
-      res.render('single-post', { post });
+      res.render('single-post', { post, loggedIn: req.session.loggedIn});
     } else {
       res.status(404).end();
     }

@@ -186,6 +186,14 @@ input {
   padding: 1%;
 }
 
+.card-body2 {
+  padding: 3%;
+  color: var(--primary);
+  background-color: var(--dark);
+  font-size: 1rem;
+  margin: 10px;
+}
+
 /* FORM */
 .form-label,
 .form-input,

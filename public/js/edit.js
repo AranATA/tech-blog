@@ -25,13 +25,14 @@ const editFormHandler = async (event) => {
       'Content-Type': 'application/json'
     }
   });
+
   console.log(response);
   if (response.ok) {
     document.location.replace('/dashboard');
   } else {
     alert('Failed to update your post');
   }
-  // document.location.replace('/dashboard');
+  document.location.replace('/dashboard');
 };
 
 const deleteClickHandler = async () => {
@@ -41,10 +42,10 @@ const deleteClickHandler = async () => {
 
   document.location.replace('/dashboard');
 };
-
+// WHY ONE BUTTON IS SUBMIT AND THE OTHER IS CLICK?
 document
   .querySelector('#edit-post-form')
   .addEventListener('submit', editFormHandler);
 document
   .querySelector('#delete-btn')
-  .addEventListener('submit', deleteClickHandler);
+  .addEventListener('click', deleteClickHandler);
