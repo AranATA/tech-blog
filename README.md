@@ -3,7 +3,7 @@
 ## **tech blog**<br>
 <br>
 
-[https://heroku/link](https://heroku/link)<br>
+[https://tech-blog-aranata.herokuapp.com/](https://tech-blog-aranata.herokuapp.com/)<br>
 <br>
 <br>
 
