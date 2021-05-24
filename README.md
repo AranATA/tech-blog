@@ -5,7 +5,8 @@
 
 [https://tech-blog-aranata.herokuapp.com/](https://tech-blog-aranata.herokuapp.com/)<br>
 <br>
-IMPORTANT NOTE: Please use "password" as password to login as any of the users shown on the homepage.
+
+``IMPORTANT NOTE: Please use "password" as password to login as any of the users shown on the app's homepage.``
 <br>
 <br>
 ## description
